@@ -49,3 +49,6 @@ def Huffman(datos):
         nodos.remove(left)
         nodos.remove(right)
         nodos.append(nuevoNodo)
+        huffmancodigo= Calculacodes(nodos[0])
+        encriptados=encriptado(datos,huffmancodigo)
+        return encriptados,nodos[0]
