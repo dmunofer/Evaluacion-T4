@@ -52,3 +52,21 @@ def Huffman(datos):
         huffmancodigo= Calculacodes(nodos[0])
         encriptados=encriptado(datos,huffmancodigo)
         return encriptados,nodos[0]
+
+def DesencriptaHuff(datos,huffmanTree):
+    treeHead= huffmanTree
+    desencriptado=[]
+    for x in datos:
+        if x == '1':
+            huffmanTree = huffmanTree.right
+        elif x == '0':
+            huffmanTree = huffmanTree.left
+        try:
+            if huffmanTree.left.simbolo == None and huffmanTree.right.simbolo == None:
+                pass
+        except AttributeError:
+            desencriptado.append(huffmanTree.simbolo)  
+            huffmanTree = treeHead  
+          
+    cadena = ''.join([str(item) for item in desencriptado])  
+    return cadena
