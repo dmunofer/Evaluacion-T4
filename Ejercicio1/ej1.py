@@ -7,6 +7,22 @@ class Nodos():
         self.right=right
         self.code=''
 
+
+def Calculacodes(nodo, valor = ''):
+
+    codes=dict()
+    nvalor = valor + str(nodo.code)
+
+    if(nodo.left):
+        Calculacodes(nodo.left, nvalor)
+    if(nodo.right):
+        Calculacodes(nodo.right, nvalor)
+
+    if(not nodo.left and not nodo.right):
+        codes[nodo.simbolo] = nvalor
+    return codes
+
+
 def encriptado(datos,coding):
     encriptado=[]
     for dato in datos:
@@ -29,4 +45,7 @@ def Huffman(datos):
         left=nodos[1]
         left.code=0
         right.code=1
-        newNode = Nodos(left.frecuencia + right.frecuencia, left.simbolo + right.simbolo, left, right) 
+        nuevoNodo = Nodos(left.frecuencia + right.frecuencia, left.simbolo + right.simbolo, left, right)
+        nodos.remove(left)
+        nodos.remove(right)
+        nodos.append(nuevoNodo)
