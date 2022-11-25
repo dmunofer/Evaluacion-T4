@@ -5,3 +5,11 @@ class Nodos():
         self.simbolo=simbolo
         self.left=left
         self.right=right
+        self.code=''
+
+def encriptado(datos,coding):
+    encriptado=[]
+    for dato in datos:
+         encriptado.append(coding[dato])
+    cadena=  ''.join([str(item) for item in encriptado])
+    
