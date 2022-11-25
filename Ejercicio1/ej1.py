@@ -21,3 +21,12 @@ def Huffman(datos):
     nodos=[]
     for simbolo in simbolos:
         nodos.append(Nodos(simbolosconfrecs.get(simbolo), simbolo))
+
+    while len(nodos)>1:
+        nodos=sorted(nodos,key=lambda x: x.frecuencia)
+
+        right=nodos[0]
+        left=nodos[1]
+        left.code=0
+        right.code=1
+        newNode = Nodos(left.frecuencia + right.frecuencia, left.simbolo + right.simbolo, left, right) 
