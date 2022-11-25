@@ -10,6 +10,7 @@ class Nodos():
 def encriptado(datos,coding):
     encriptado=[]
     for dato in datos:
-         encriptado.append(coding[dato])
+        encriptado.append(coding[dato])
     cadena=  ''.join([str(item) for item in encriptado])
+    return cadena
     
