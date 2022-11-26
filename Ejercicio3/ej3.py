@@ -22,7 +22,7 @@ def paisambasmaravillas(lista):
             pass
     return paisesambas
 
-def paismismasmaravillas(lista):
+def paismismasmaravillasnatu(lista):
     paisesambasnatu=[]
     for maravilla in lista:
         cont=0
@@ -36,7 +36,7 @@ def paismismasmaravillas(lista):
             pass
     return paisesambasnatu
 
-def paismismasmaravillas(lista):
+def paismismasmaravillasarq(lista):
     paisesambasarq=[]
     for maravilla in lista:
         cont=0
