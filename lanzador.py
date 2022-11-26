@@ -5,7 +5,7 @@ sys.path.insert(0,"/Users/smite/Documents/GitHub/EvaluacionT4/Ejercicio2/ej2")
 sys.path.insert(0,"/Users/smite/Documents/GitHub/EvaluacionT4/Ejercicio3/ej3")
 
 from Ejercicio1 import ej1
-from Ejercicio2 import *
+from Ejercicio2 import ej2
 from Ejercicio3 import ej3
 
 def exe():
@@ -20,6 +20,18 @@ def exe():
         print(f"El mensaje decodificado es {desencriptado}")
 
     if ejercicio==2:
+        ej2.nombresAgua()
+        ej2.nombresElec()
+        ej2.nombresFuego()
+        ej2.nombresPlanta()
+        ej2.ordenascendente()
+        ej2.debilesJolteon()
+        ej2.debilesLycanroc()
+        ej2.debilesTyrantrum()
+        ej2.mostrarTipos()
+
+    if ejercicio==3:
         
+
 
 

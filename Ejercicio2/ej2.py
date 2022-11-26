@@ -91,7 +91,7 @@ def mostrarTipos():
 
 def mostrarnPokedelTipo(tipo):
     lista1=df[df['Type 1']==str(tipo)].index.tolist()
-    lista2=df[df['Type 2']==str(tipo)].index.tolist()
+    lista2=df[df['Type 2']==str(tipo)].index.tolist()  
     return len(lista1+lista2)
 
 
