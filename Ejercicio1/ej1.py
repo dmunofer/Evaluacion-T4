@@ -65,8 +65,8 @@ def DesencriptaHuff(datos,huffmanTree):
             if huffmanTree.left.simbolo == None and huffmanTree.right.simbolo == None:
                 pass
         except AttributeError:
-            desencriptado.append(huffmanTree.simbolo)  
-            huffmanTree = treeHead  
-          
-    cadena = ''.join([str(item) for item in desencriptado])  
+            desencriptado.append(huffmanTree.simbolo)
+            huffmanTree = treeHead
+
+    cadena = ''.join([str(item) for item in desencriptado])
     return cadena
