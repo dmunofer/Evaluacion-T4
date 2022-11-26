@@ -21,3 +21,31 @@ def paisambasmaravillas(lista):
         else:
             pass
     return paisesambas
+
+def paismismasmaravillas(lista):
+    paisesambasnatu=[]
+    for maravilla in lista:
+        cont=0
+        if lista[maravilla]['Tipo']=='NATURAL':
+            cont+=1
+        elif lista[maravilla]['Tipo']=='NATURAL':
+            cont+=1
+        elif cont==2:
+            paisesambasnatu.append(lista[maravilla]['Pais'])
+        else:
+            pass
+    return paisesambasnatu
+
+def paismismasmaravillas(lista):
+    paisesambasarq=[]
+    for maravilla in lista:
+        cont=0
+        if lista[maravilla]['Tipo']=='ARQUITECTURA':
+            cont+=1
+        elif lista[maravilla]['Tipo']=='ARQUITECTURA':
+            cont+=1
+        elif cont==2:
+            paisesambasarq.append(lista[maravilla]['Pais'])
+        else:
+            pass
+    return paisesambasarq
